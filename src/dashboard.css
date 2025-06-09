@@ -1,0 +1,111 @@
+ .navbar {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 32px;
+     list-style-type: none;
+     padding-left: 24px;
+     padding-right: 24px;
+     color: #3FD28B;
+     font-size: 14px;
+     font-weight: bold;
+ }
+
+ .announcementsImg {
+     height: 24;
+     width: 24;
+ }
+
+ .accountImg {
+     height: 32px;
+     width: 32px;
+ }
+
+ .alertsImg {
+     height: 24px;
+     width: 24px;
+ }
+
+ .mainBoard {
+     height: 733px;
+     width: 65%;
+     /* background-color: #9d9d9d; */
+ }
+
+ .corclHead {
+     width: 100%;
+     height: 64px;
+     background-color: #8DDC97;
+     display: flex;
+     align-items: center;
+     font-weight: 600;
+     justify-content: space-around;
+     color: #222222;
+ }
+
+ .boldCount {
+     font-size: 24px;
+     font-weight: bolder;
+ }
+
+ .counts {
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     gap: 8px;
+ }
+
+ .searchParms {
+     height: 45px;
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+
+ .itemContainer {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
+     grid-template-rows: repeat(auto-fit, 246px);
+     gap: 24px;
+     height: 100%;
+     width: 100%;
+     margin-top: 16px;
+ }
+
+ .items {
+     background-color: red;
+     padding: 8px;
+     display: flex;
+     flex-direction: row;
+ }
+
+ .SubjContent {
+
+     display: flex;
+     align-items: flex-start;
+     justify-content: space-between;
+     flex-direction: column;
+ }
+
+ .SubjContent {}
+
+ .items img {
+     margin: 16px;
+ }
+ .hemburger {
+    display: none;
+ }
+ .menuItems {
+    display: inline;
+ }
+
+ @media (max-width: 800px) {
+    .menuItems {
+        display: none;
+    }
+    .hemburger {
+        display: inline;
+    }
+
+ }
