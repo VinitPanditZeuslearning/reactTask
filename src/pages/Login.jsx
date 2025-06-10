@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import '../index.css'
+import { Link } from 'react-router-dom';
 
 export default function Login() {
   return (
@@ -60,9 +61,9 @@ export default function Login() {
                 </div>
 
                 <div className="buttonCont">
-                    <button>
+                    <Link className='LoginBtn' to="/Dashboard">
                         Log In
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>

@@ -1,26 +1,30 @@
 import Header from './Components/Header'
 import Footer from './Components/Footer'
 import Login from './pages/Login'
-import styled from 'styled-components';
-import DashBoard from './pages/DashBoard';
+import DashBoard from './pages/DashBoard'
+import styled from 'styled-components'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+
 import './index.css'
+
 const Root = styled.div`
-display: flex;
+  display: flex;
 `
 
 function App() {
-
   return (
-    <>
+    <Router>
+      <Header />
+
       <div className='container'>
-        <Header></Header>
-
-        {/* <Login></Login> */}
-        <DashBoard></DashBoard>
+        <Routes>
+          <Route path='/' element={<Login />} />
+          <Route path='/Dashboard' element={<DashBoard />} />
+        </Routes>
       </div>
-      <Footer></Footer>
 
-    </>
+      <Footer />
+    </Router>
   )
 }
 

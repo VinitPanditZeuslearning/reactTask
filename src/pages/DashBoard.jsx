@@ -2,19 +2,33 @@ import React from 'react'
 import Items from '../Components/Items'
 import '../dashboard.css'
 export default function DashBoard() {
+    function getSelected(e){
+        const selector = document.getElementById('selector');
+        console.log('triggerd')
+        console.log(e.target.id)
+        if ( e.target.id == 'classes') {
+            selector.classList.remove('selectorLeft')
+            selector.classList.add('selectorRight')
+        }
+        else {
+            selector.classList.remove('selectorRight')
+            selector.classList.add('selectorLeft')
+        }
+    }
     return (
         <div class="mainBoard">
             <div class="corclHead">
-                <div class="counts Courses">
-                    <img src="./static/courses.svg" alt=""/>
-                        <span class="boldCount">
+                <div className='selector selectorLeft' id='selector'> </div>
+                <div class="counts Courses selected" id='course' onClick={(e)=>{getSelected(e)}}>
+                    <img src="./static/courses.svg" id='course' alt=""/>
+                    <span class="boldCount" id='course'>
                             4
-                        </span>
-                        Courses
+                    </span>
+                    Courses
                 </div>
-                <div class="counts classes">
-                    <img src="./static/courses.svg" alt=""/>
-                        <span class="boldCount">4 </span>
+                <div class="counts classes" id='classes' onClick={(e)=>{getSelected(e)}}>
+                    <img src="./static/courses.svg" alt="" id='classes'/>
+                        <span class="boldCount" id='classes'>4 </span>
                         Classes
                 </div>
             </div>

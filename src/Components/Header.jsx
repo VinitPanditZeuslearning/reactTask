@@ -1,14 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import '../index.css'
 import '../dashboard.css'
 
 export default function Header() {
+
+
+    function openMenue(e) {
+        console.log('click')
+        const hembr = document.getElementById('hemburger');
+        const menubar = document.getElementById('menuBar');
+        hembr.classList.toggle( 'rotate' );
+        menubar.classList.toggle( 'slide' );
+    }
+
     return (
         <>
             <div className="header">
                 <div>
                     <img id="logo" src="./static/logo_used_in_header.svg" alt="" />
+                </div>
+
+                <div className='menuBar' id='menuBar' >
+                    <span> DASHBOARD</span>
+                    <span> CONTENT</span>
+                    <span> USERS</span>
+                    <span> REPORTS</span>
+                    <span> ADMIN</span>
                 </div>
                 <ul className="navbar">
                     <li className='menuItems'> DASHBOARD</li>
@@ -25,8 +43,8 @@ export default function Header() {
                     <li>
                         <img className="accountImg" src="./static/account_circle.svg" alt="" />
                     </li>
-                    <li className='hemburger'>
-                        <img src="./static/hamburger.svg"  />
+                    <li className='hemburger'  onClick={(e)=>{openMenue()}} >
+                        <img id='hemburger' src="./static/hamburger.svg"  />
                     </li>
                 </ul>
             </div>

@@ -36,7 +36,10 @@ img {
 .itemName {
     font-weight: 600;
     font-size: 16px;
-    width: 240px;
+    width: 100%;
+}
+.itemContent {
+    width: 50%;
 }
 .itemsubjGrade {
     display: flex;
@@ -52,13 +55,14 @@ img {
     display: flex;
     gap: 8px;
     align-items: center;
+    padding-left: 5px;
 }
 b {
     color: black;
     margin-right: 5px;
 }
 .teachersDropDown {
-    width: 264px;
+    width: 100%;
 }
 .studentsNdate {
     display: flex;
@@ -126,10 +130,10 @@ export default function Items({ img, topicName, Subject, Grade, units, lessons, 
                                 <select name="teachers" class="dropDown teachersDropDown">
                                     {
                                         (!recentClass?.teachers || recentClass.teachers.length === 0)
-                                            ? (<option style={{ color: "#666666" }}  value={"NoClasses"}> 
-                                                
-                                             No Classes
-                                             </option>)
+                                            ? (<option style={{ color: "#666666" }} value={"NoClasses"}>
+
+                                                No Classes
+                                            </option>)
                                             : recentClass.teachers.map((nam, index) => (
                                                 <option key={index} value={nam}>{nam}</option>
                                             ))
@@ -158,10 +162,10 @@ export default function Items({ img, topicName, Subject, Grade, units, lessons, 
             <div className='loweBar'>
                 <hr />
                 <div className='iconsCont'>
-                    <img src="./static/preview.svg" alt="" style={{opacity: iconsObj.preview ? 1: 0.2}} />
-                    <img src="./static/reports.svg" alt="" style={{opacity: iconsObj.reports ? 1: 0.2}}/>
-                    <img src="./static/manage_course.svg" alt="" style={{opacity: iconsObj.manage_course ? 1: 0.2}}/>
-                    <img src="./static/grade_submissions.svg" alt="" style={{opacity: iconsObj.grade_submissions ? 1: 0.2}} />
+                    <img src="./static/preview.svg" alt="" style={{ opacity: iconsObj.preview ? 1 : 0.2 }} />
+                    <img src="./static/reports.svg" alt="" style={{ opacity: iconsObj.reports ? 1 : 0.2 }} />
+                    <img src="./static/manage_course.svg" alt="" style={{ opacity: iconsObj.manage_course ? 1 : 0.2 }} />
+                    <img src="./static/grade_submissions.svg" alt="" style={{ opacity: iconsObj.grade_submissions ? 1 : 0.2 }} />
                 </div>
             </div>
         </Container>
